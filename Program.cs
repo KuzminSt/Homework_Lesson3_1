@@ -13,38 +13,28 @@ namespace Homework_Lesson3_1
         static void Main(string[] args)
         {
             bool answerEnd = false;
+            
 
-
+            
 
             while (!answerEnd)                                                    //Симуляция основного меню
 
             {
                 Console.Clear();
                 Console.WriteLine("Домашняя работа по Уроку 3\nВыберите задание:");
-                Console.WriteLine("1.Задание №2\n2.Задание №7\n3.Задание №13");    //Запрашиваем какой вариант запустить
+                Console.WriteLine("1.Задание №2\n2.Задание №7\n3.Задание №13\n4.Выход");    //Запрашиваем какой вариант запустить
                 string answer1 = Console.ReadLine().Trim().ToLower();
                 switch (answer1)
                 {
                     case "1": Task1(); break;
                     case "2": Task2(); break;
                     case "3": Task3(); break;
+                    case "4": answerEnd = true; break;
                     default: Console.WriteLine("Такой вариант отсутствует"); break;
                 }
 
-                string answer2;
-                bool End1 = false;
-                do
-                {
-                    Console.WriteLine("Продолжить? (да / нет)");
-                    answer2 = Console.ReadLine().Trim().ToLower();
-                    switch (answer2)
-                    {
-                        case "да": End1 = true; break;
-                        case "нет": answerEnd = true; End1 = true; break;
-                        default: Console.WriteLine("Такой вариант отсутствует"); break;
-                    }
-                }
-                while (!End1);
+               
+                
 
                
 
